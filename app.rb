@@ -8,16 +8,16 @@ get '/' do
     @@nroUsuario = 0
     @@mensajeResultado = ""
     @@primeraVez = true
+    @@obing = Juego.new
     erb :inicio
 end
 
 post '/' do
     @@primeraVez = false
     @@nroUsuario = params["nroUsuario"].to_i
-    obing = Juego.new
-    obing.ingresarRespuesta(@@nroUsuario)
+    @@obing.ingresarRespuesta(@@nroUsuario)
 
-    if obing.numeroCorrecto()
+    if @@obing.numeroCorrecto()
 	@@mensajeResultado = "Adivinaste!"
     else
 	@@mensajeResultado = "No Adivinaste!"

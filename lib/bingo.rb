@@ -4,7 +4,14 @@ class Juego
 	end
 
 	def resultadoMaquina()
-		7
+		if @numAleatorio == nil
+		   @numAleatorio=7 
+		end
+		return @numAleatorio
+	end
+
+	def forzar(numero)
+		@numAleatorio=numero
 	end
 
 	def ingresarRespuesta (numero)
