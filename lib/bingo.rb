@@ -1,9 +1,15 @@
 class Juego
+def initialize
+@respuesta = 0
+end
+
 	def resultadoMaquina
 		7
 	end
 	def respuestaUsuario
-		7
+	   @respuesta 
 	end
-
+	def ingresarRespuesta numero
+	   @respuesta = numero
+	end
 end
