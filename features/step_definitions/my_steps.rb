@@ -20,3 +20,14 @@ Then(/^Veo el numero del usuario "(.*?)"$/) do |numero|
   last_response.body.should =~ /#{text}/m
 end
 
+Then(/^Se muestra Adivinaste$/) do
+  text = "Adivinaste"
+  last_response.body.should =~ /#{text}/m    
+end
+
+Then(/^Se muestra No Adivinaste$/) do
+  text = "No Adivinaste"
+  last_response.body.should =~ /#{text}/m    
+end
+
+
