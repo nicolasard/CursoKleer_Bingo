@@ -16,7 +16,7 @@ When(/^El usuario toca el boton adivinar$/) do
 end
 
 Then(/^Veo el numero del usuario "(.*?)"$/) do |numero|
-  text = "Numero: "+numero
+  text = "Número: "+numero
   last_response.body.should =~ /#{text}/m
 end
 
