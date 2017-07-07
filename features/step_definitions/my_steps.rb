@@ -11,8 +11,8 @@ When(/^El usuario ingresa el numero "(.*?)"$/) do |numero|
   fill_in("nroUsuario", :with => numero)
 end
 
-When(/^El usuario toca el boton enviar$/) do
-  click_button("enviar")
+When(/^El usuario toca el boton adivinar$/) do
+  click_button("Adivinar")
 end
 
 Then(/^Veo el numero del usuario "(.*?)"$/) do |numero|
@@ -29,5 +29,7 @@ Then(/^Se muestra No Adivinaste$/) do
   text = "No Adivinaste"
   last_response.body.should =~ /#{text}/m    
 end
+
+
 
 
