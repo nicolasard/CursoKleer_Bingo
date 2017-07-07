@@ -1,15 +1,25 @@
 class Juego
-def initialize
-@respuesta = 0
-end
+	def initialize()
+	@respuesta = 0
+	end
 
-	def resultadoMaquina
+	def resultadoMaquina()
 		7
 	end
-	def respuestaUsuario
+
+	def respuestaUsuario()
 	   @respuesta 
 	end
-	def ingresarRespuesta numero
+
+	def ingresarRespuesta (numero)
 	   @respuesta = numero
+	end
+
+	def numeroCorrecto()
+	   if @respuesta == resultadoMaquina()
+		return true
+           else
+		return false
+	   end 
 	end
 end

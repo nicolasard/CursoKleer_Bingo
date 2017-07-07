@@ -1,4 +1,5 @@
 require 'sinatra'
+require './lib/bingo.rb'
 
 @@nroUsuario = 0
 
@@ -10,7 +11,10 @@ end
 
 post '/' do
     @@nroUsuario = params["nroUsuario"].to_i
-    if @@nroUsuario == 7
+    obing = Juego.new
+    obing.ingresarRespuesta(@@nroUsuario)
+
+    if obing.numeroCorrecto()
 	@@mensajeResultado = "Adivinaste!"
     else
 	@@mensajeResultado = "No Adivinaste!"
