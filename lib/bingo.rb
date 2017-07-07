@@ -7,10 +7,6 @@ class Juego
 		7
 	end
 
-	def respuestaUsuario()
-	   @respuesta 
-	end
-
 	def ingresarRespuesta (numero)
 	   @respuesta = numero
 	end

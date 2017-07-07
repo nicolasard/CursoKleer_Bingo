@@ -12,13 +12,13 @@ describe "Bingo" do
 		resultado = juego.resultadoMaquina
 		juego.ingresarRespuesta(7)
 		respuesta = juego.respuestaUsuario
-                expect(resultado).to eq respuesta
+                expect(juego.numeroCorrecto).to eq true
 	end
      	it 'Usuario ingresó 4 y el resultado es falso' do
 		juego = Juego.new
 		juego.ingresarRespuesta(4)
 		resultado = juego.resultadoMaquina
 		respuesta = juego.respuestaUsuario
-                expect(respuesta).should_not eq resultado
+                expect(juego.numeroCorrecto).to eq false
 	end
 end
